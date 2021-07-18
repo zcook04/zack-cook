@@ -27,8 +27,6 @@ exports.getBlog = async (req, res, next) => {
     } catch (err) {
         return res.status(400).json({success: false, msg: `Blog id ${req.params.id} is invalid`})
     }
-
-    
 };
 
 // @DESC        CREATE A SINGLE BLOG
