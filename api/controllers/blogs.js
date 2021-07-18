@@ -20,7 +20,7 @@ exports.getBlog = async (req, res, next) => {
         if(blog){
             return res.status(200).json(blog)
         } else {
-            return res.status(200).json({success: false, msg: `Blog by id ${req.params.id} not found.`})
+            return res.status(204).end()
         }
         
     } catch (err) {
