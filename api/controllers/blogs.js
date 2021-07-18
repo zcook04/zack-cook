@@ -22,21 +22,28 @@ exports.getBlog = async (req, res, next) => {
         } else {
             return res.status(204).end()
         }
-        
+
     } catch (err) {
         return res.status(400).json({success: false, msg: `Blog id ${req.params.id} is invalid`})
     }
 };
 
 // @DESC        CREATE A SINGLE BLOG
-// @ROUTE       POST /api/v1/blogs/:id
+// @ROUTE       POST /api/v1/blogs
 // @ACCESS      PRIVATE
 exports.createBlog = async (req, res, next) => {
-    res.status(200).json({
-        success: true,
-        data: 'Blog Created',
-        msg: "placeholder for createBlog function"
-    })
+    try{
+        const newBlog = new Blog(req.body)
+        const alreadyExists = await Blog.findOne({"title": req.body.title })
+        console.log(alreadyExists)
+        if (alreadyExists) {
+            return res.status(400).json({success: false, msg: "Blog with that title already exists"})
+        }
+        newBlog.save()
+        return res.status(203).json({success: true, msg: `Successfully created new Blog ${newBlog.title}`})
+    } catch (err) {
+        return res.status(500).json({success: false, msg: "An error occured saving blog to database", err: err})
+    }
 };
 
 // @DESC        UPDATE A SINGLE BLOG
