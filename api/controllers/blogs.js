@@ -34,22 +34,9 @@ exports.getBlog = async (req, res, next) => {
 exports.createBlog = async (req, res, next) => {
     res.status(200).json({
         success: true,
-        data: 'Blog Created'
+        data: 'Blog Created',
+        msg: "placeholder for createBlog function"
     })
-
-    // const blog1 = new Blog({
-    //     title: 'Test2',
-    //     description: 'test2 desc',
-    //     author: 'Zack cook2',
-    //     email: 'Zack2@zack.com',
-    //   })
-      
-    //   blog1.save((err, res) => {
-    //     if (err) {
-    //       return console.log(err)
-    //     }
-    //     return console.log('success')
-    //   })
 };
 
 // @DESC        UPDATE A SINGLE BLOG
@@ -58,7 +45,8 @@ exports.createBlog = async (req, res, next) => {
 exports.updateBlog = async (req, res, next) => {
     res.status(200).json({
         success: true,
-        data: 'Blog updated'
+        data: 'Blog updated',
+        msg: "placeholder for updateblog function"
     })
 };
 
@@ -68,5 +56,7 @@ exports.updateBlog = async (req, res, next) => {
 exports.deleteBlog = async (req, res, next) => {
     res.status(200).json({
         success: true,
+        data: 'Blog deleted',
+        msg: "placeholder for deleteBlog function"
     })
 };
