@@ -1,0 +1,4 @@
+*.crt
+*.key
+docker-compose.yml
+ssl/
