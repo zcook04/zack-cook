@@ -2,4 +2,4 @@
 *.key
 ssl/
 node_modules
-.env
+*.env

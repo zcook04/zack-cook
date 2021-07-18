@@ -8,8 +8,9 @@ services:
       - '5000:5000'
     image: surreal29/zack-cook-api
     volumes:
-      - /app/node_modules
       - ./api:/app
+      - /app/node_modules
+      - /app/nodemon
   client_dev:
     build:
       context: ./client
