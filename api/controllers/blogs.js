@@ -28,6 +28,20 @@ exports.createBlog = async (req, res, next) => {
         success: true,
         data: 'Blog Created'
     })
+
+    // const blog1 = new Blog({
+    //     title: 'Test2',
+    //     description: 'test2 desc',
+    //     author: 'Zack cook2',
+    //     email: 'Zack2@zack.com',
+    //   })
+      
+    //   blog1.save((err, res) => {
+    //     if (err) {
+    //       return console.log(err)
+    //     }
+    //     return console.log('success')
+    //   })
 };
 
 // @DESC        UPDATE A SINGLE BLOG

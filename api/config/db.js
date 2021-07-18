@@ -1,6 +1,7 @@
 const dotenv = require('dotenv')
 const path = require('path')
 const mongoose = require('mongoose')
+const Blog = require('../models/Blog')
 
 dotenv.config({
     path: path.resolve(__dirname + '/config/config.env'),
@@ -8,7 +9,7 @@ dotenv.config({
 
 const db = async () => {
     const connection = await mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true });
-    return
+    return connection
 }
 
-module.exports.db = db
+module.exports = db

@@ -11,7 +11,7 @@ dotenv.config({
 });
 
 // CONNECT TO DB
-connectDB.db();
+connectDB();
 
 // ROUTES
 const blogs = require('./routes/blogs');
