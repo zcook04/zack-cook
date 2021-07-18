@@ -1,7 +1,6 @@
 const dotenv = require('dotenv')
 const path = require('path')
 const mongoose = require('mongoose')
-const Blog = require('../models/Blog')
 
 dotenv.config({
     path: path.resolve(__dirname + '/config/config.env'),
