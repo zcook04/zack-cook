@@ -2,3 +2,4 @@
 *.key
 docker-compose.yml
 ssl/
+node_modules
