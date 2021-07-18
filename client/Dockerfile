@@ -5,6 +5,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx
-COPY --from=build-stage /app/.next /usr/share/nginx/html
+FROM nginx:alpine
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=build-stage /app/out /usr/share/nginx/html
 COPY --from=build-stage /app/nginx/default.conf /etc/nginx/conf.d/default.conf
