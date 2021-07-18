@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const BlogSchema = new mongoose.Schema({
-  name: {
+  title: {
     type: String,
     required: [true, 'Please add a name'],
     unique: true,
@@ -13,6 +13,11 @@ const BlogSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please add a description'],
     maxLength: [500, 'Description can not be more than 500 characters'],
+  },
+  author: {
+    type: String,
+    required: [true, 'Please add an author'],
+    maxLength: [50, 'Author can be no longer than 50 characators']
   },
   email: {
     type: String,
