@@ -1,5 +1,4 @@
 const Blog = require('../models/Blog');
-const mongoose = require('mongoose')
 
 // @DESC        GET ALL BLOGS
 // @ROUTE       GET /api/v1/blogs
