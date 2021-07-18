@@ -1,23 +1,34 @@
 const Blog = require('../models/Blog');
+const mongoose = require('mongoose')
 
 // @DESC        GET ALL BLOGS
 // @ROUTE       GET /api/v1/blogs
 // @ACCESS      PUBLIC
 exports.getBlogs = async (req, res, next) => {
-    res.status(200).json({
-        success: true,
-        data: 'Get All Blogs'
+    const blogs = await Blog.find({}, (err, data) => {
+        if (err) return res.status(500).json(err)
+        return data
     })
+    res.status(200).json(blogs)
 };
 
 // @DESC        GET SINGLE BLOGS
 // @ROUTE       GET /api/v1/blogs/:id
 // @ACCESS      PUBLIC
 exports.getBlog = async (req, res, next) => {
-    res.status(200).json({
-        success: true,
-        data: 'Single Blog'
-    })
+    try{
+        const blog = await Blog.findById(req.params.id)
+        if(blog){
+            return res.status(200).json(blog)
+        } else {
+            return res.status(200).json({success: false, msg: `Blog by id ${req.params.id} not found.`})
+        }
+        
+    } catch (err) {
+        return res.status(400).json({success: false, msg: `Blog id ${req.params.id} is invalid`})
+    }
+
+    
 };
 
 // @DESC        CREATE A SINGLE BLOG
