@@ -1,0 +1,39 @@
+.header {
+    width: 100%;
+    position: fixed;
+    background-color: var(--color-blue-dark);
+}
+
+.wrapper {
+    max-width: 1100px;    
+    margin: auto;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navlinks {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+    color: var(--color-blue-light);
+    font-weight: 500;
+    font-size: 1.1rem;
+    height: 100%;
+    margin: 0;
+}
+
+.navlink {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navlink:hover {
+    color: white;
+    cursor: pointer;
+}

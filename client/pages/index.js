@@ -1,9 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -19,8 +15,6 @@ export default function Home() {
           <p className={styles.description}>
             Site is under construction.  Please check back later.
           </p>
-
-          <Link href="/blogs">Blogs</Link>
     </div>
   )
 }
