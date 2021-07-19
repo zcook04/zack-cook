@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => updateProfession(professions.indexOf(profession)), 4500)
-  }, [profession])
+  }, [profession, professions, updateProfession])
 
   return (
     <div className={styles.heroContainer}>
