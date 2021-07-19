@@ -17,7 +17,8 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => updateProfession(professions.indexOf(profession)), 4500)
-  }, [profession, professions, updateProfession])
+    //eslint-disable-next-line
+  }, [profession])
 
   return (
     <div className={styles.heroContainer}>
