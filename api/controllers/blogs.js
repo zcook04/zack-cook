@@ -50,20 +50,34 @@ exports.createBlog = async (req, res, next) => {
 // @ROUTE       PUT /api/v1/blogs/:id
 // @ACCESS      PRIVATE
 exports.updateBlog = async (req, res, next) => {
-    res.status(200).json({
-        success: true,
-        data: 'Blog updated',
-        msg: "placeholder for updateblog function"
-    })
+    try{
+        const blog = await Blog.findOneAndUpdate({_id: req.params.id}, req.body, { new: true})
+        if(blog){
+            return res.status(200).json({success: true, msg: blog})
+        } else {
+            return res.status(404).json({success: false, msg: `${req.params.id} was not found in blogs`})
+        }
+
+    } catch (err) {
+        return res.status(400).json({success: false, msg: `Blog id ${req.params.id} is invalid`})
+    }
+
 };
 
 // @DESC        DELETE A SINGLE BLOG
 // @ROUTE       DELETE /api/v1/blogs/:id
 // @ACCESS      PRIVATE
 exports.deleteBlog = async (req, res, next) => {
-    res.status(200).json({
-        success: true,
-        data: 'Blog deleted',
-        msg: "placeholder for deleteBlog function"
-    })
+    try{
+        const blog = await Blog.findOneAndDelete({_id: req.params.id})
+        if(blog && String(blog._id) === String(req.params.id)){
+            return res.status(200).json({success: true, msg: `${blog.title} (${req.params.id})successfully deleted.`})
+        } else {
+            return res.status(404).json({success: false, msg: `${req.params.id} was not found in blogs`})
+        }
+
+    } catch (err) {
+        console.log(err)
+        return res.status(400).json({success: false, msg: `Blog id ${req.params.id} is invalid`})
+    }
 };
