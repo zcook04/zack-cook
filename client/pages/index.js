@@ -17,7 +17,6 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => updateProfession(professions.indexOf(profession)), 4500)
-    //eslint-disable-next-line
   }, [profession])
 
   return (
@@ -25,10 +24,10 @@ export default function Home() {
       <div className={styles.heroTextWrap}>
         <div className={styles.heroTextCentered}>
           <h1 className={styles.heroTitle}>
-            Hi, I'm Zack
+            Hi, I&apos;m Zack
           </h1>
           <p className={styles.heroDescription}>
-            I'm a <b>{profession}</b>
+            I&apos;m a <b>{profession}</b>
           </p>
           <div className={styles.ctadiv}>
           <p className={styles.cta}>View My Work</p>
