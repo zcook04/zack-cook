@@ -10,10 +10,13 @@
   --font-text: 'Lato', sans-serif;
 }
 
-html,
+html {
+  padding: 0;
+}
 body {
   padding: 0;
   margin: 0;
+  margin-top:0;
   font-family: var(--font-text);
   font-weight: 100;
   background-color: var(--color-blue-dark);
@@ -28,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-blue-light);
   font-family: var(--font-header);
   font-weight: 400;
+  margin-top: 0;
 }
 
 p {
@@ -38,9 +42,3 @@ p {
 * {
   box-sizing: border-box;
 }
-
-.content-wrapper {
-  margin: auto;
-  max-width: 1100px;
-}
-

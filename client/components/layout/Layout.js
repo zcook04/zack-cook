@@ -1,11 +1,13 @@
 import Header from "./Header"
 import Footer from "./Footer"
 
+import classes from './Layout.module.css'
+
 function Layout(props) {
     return (
         <>
          <Header />
-            <main>
+            <main className={classes.wrapper}>
                 {props.children}
             </main>
          <Footer />   
