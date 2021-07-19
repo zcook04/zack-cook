@@ -42,3 +42,12 @@ p {
 * {
   box-sizing: border-box;
 }
+
+.btn-primary {
+  border: 1px solid var(--color-blue-light);
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,19 @@
+.footer {
+    background-color: rgb(196, 196, 196);
+    min-height: 250px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: auto;
+    max-width: 1100px;
+    height: 100%;
+}
+
+.p {
+    color: black;
+    font-weight: 500;
+}
+
