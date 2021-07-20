@@ -2,6 +2,7 @@
     width: 100%;
     position: fixed;
     background-color: var(--color-blue-dark);
+    z-index: 10;
 }
 
 .wrapper {
@@ -38,3 +39,4 @@
     color: white;
     cursor: pointer;
 }
+

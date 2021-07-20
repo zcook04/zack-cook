@@ -1,0 +1,33 @@
+
+.certCard {
+    display: flex;
+    padding: 4rem;
+    align-content: flex-start;
+    background: #FFFFFF;
+  }
+
+  .certImg {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 150px;
+    flex-shrink: 0;
+  }
+
+  .certInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .certInfo H3 {
+    margin: 0;
+    color: var(--color-blue-medium)
+  }
+  
+  .certInfo p {
+    color: black;
+    font-weight: 400;
+    max-width: 90%;
+    line-height: 1.5rem;
+    margin: 0;
+  }

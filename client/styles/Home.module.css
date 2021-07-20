@@ -51,3 +51,19 @@
   color: white;
   border-color: white;
 }
+
+.certificationContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #DFDFDF;
+}
+
+.certificationWrapper {
+  padding: 3rem 0;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-direction: column;
+}
