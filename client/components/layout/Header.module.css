@@ -40,3 +40,15 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        justify-content: center;
+    }
+
+    .navlinks {
+        justify-content: center;
+        padding: 0;
+        width: 90%
+    }
+    
+}
