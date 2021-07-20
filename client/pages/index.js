@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import CertificationCard from '../components/CertificationCard'
 
 export default function Home() {
-  const professions = ['full stack web developer', 'network engineer', 'security professional', 'network security engineer', 'developer', 'problem solver', 'professional', 'content creator', 'information systems security professional']
+  const professions = ['full stack web developer', 'network engineer', 'security professional', 'network security engineer', 'developer', 'problem solver', 'chess enthusiast', 'professional', 'content creator', 'information systems security professional', 'husband and father']
 
   const [profession, setProfession] = useState(professions[0])
 
@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setTimeout(() => updateProfession(professions.indexOf(profession)), 4500)
+    setTimeout(() => updateProfession(professions.indexOf(profession)), 3500)
   }, [profession])
 
   return (
@@ -47,12 +47,12 @@ export default function Home() {
       />
       <CertificationCard
         desc="Cisco Certified Network Professional Security (CCNP Security) certification program is aligned specifically to the job role of the Cisco Network Security Engineer responsible for Security in Routers, Switches, Networking devices and appliances, as well as choosing, deploying, supporting and troubleshooting Firewalls, VPNS, and IDS/IPS solutions for their networking environments."
-        title="Cisco Certified Network Professional Security"
+        title="Cisco Certified Network Professional - Security"
         img="/ccnp-sec.png"
       />
       <CertificationCard
         desc="Holders of CCNP Enterprise certification have demonstrated skills with enterprise networking solutions."
-        title="Cisco Certified Networking Professional -Enterprise"
+        title="Cisco Certified Networking Professional - Enterprise"
         img="/ccnp-ent.png"
       />
       <CertificationCard

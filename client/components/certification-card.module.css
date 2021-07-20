@@ -4,6 +4,7 @@
     padding: 4rem;
     align-content: flex-start;
     background: #FFFFFF;
+    box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.604);
   }
 
   .certImg {
