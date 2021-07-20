@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Image from 'next/image'
+import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import CertificationCard from '../components/CertificationCard'
 
@@ -23,6 +23,11 @@ export default function Home() {
 
   return (
     <>
+    <Head>
+      <title>zack-cook.com</title>
+      <meta name="description" content="zack-cook.com.  A personal website featuring portfolio projects and blogs created and composed by Zachary J. Cook, CISSP." />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <div className={styles.heroContainer}>
       <div className={styles.heroTextWrap}>
         <div className={styles.heroTextCentered}>
