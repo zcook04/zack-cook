@@ -97,4 +97,8 @@
   flex-direction: column;
   align-items: center;
   }
+
+  .certificationWrapper {
+    padding: 1rem;
+  }
 }
