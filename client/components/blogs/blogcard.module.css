@@ -1,0 +1,24 @@
+.wrapper {
+    max-width: 250px;
+    background-color: white;
+    box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.604);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -30px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.wrapper:active {
+    box-shadow: 5px 5px 12px -5px rgba(0, 0, 0, 0.604);
+}
+
+.wrapper h2 {
+    color: var(--color-blue-medium)
+}
+
+.wrapper p {
+    color: var(--color-blue-dark);
+    font-weight: 400;
+}

@@ -9,7 +9,7 @@ export function getBlogFiles() {
 }
 
 export function getBlogData(filename) {
-    const filePath = path.join(blogDirectory, filename+'.md');
+    const filePath = path.join(blogDirectory, filename);
     const fileContent = fs.readFileSync(filePath, 'utf-8')
     const {data, content} = matter(fileContent)
     const blogSlug = filename.replace(/\.md$/, '')

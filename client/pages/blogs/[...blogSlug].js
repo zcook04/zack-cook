@@ -6,7 +6,6 @@ import {getBlogData, getBlogFiles } from '../../utils/blogUtil'
 import classes from './blogslug.module.css'
 
 function SingleBlogPage(props) {
-    console.log(props.blog.title)
     return (
         <article className={classes.article}>
             <BlogHeading title={props.blog.title} desc={props.blog.desc} date={props.blog.date} author={props.blog.author} image={props.blog.image}/>
@@ -17,7 +16,7 @@ function SingleBlogPage(props) {
 
 export function getStaticProps(context) {
     const filename = context.params.blogSlug[0]
-    const blogData = getBlogData(filename)
+    const blogData = getBlogData(filename+'.md')
     return {
         props: {
             blog: blogData
