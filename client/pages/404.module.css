@@ -1,0 +1,34 @@
+.forofor {
+    background-color: #CDCDCD;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forofor h1 {
+    color: var(--color-blue-dark);
+    margin: 0;
+    font-weight: 700;
+}
+
+.forofor p {
+    color: var(--color-blue-dark);
+    font-weight: 400;
+}
+
+.button a {
+    padding: 1rem;
+    background-color: var(--color-blue-dark);
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px -5px rgba(1, 24, 84, 0.604);
+}
+
+.button a:hover {
+    color: white;
+}
+
+.button a:active {
+    box-shadow: 5px 5px 8px -5px rgba(1, 24, 84, 0.604);
+}
