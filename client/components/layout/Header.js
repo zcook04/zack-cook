@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import Head from 'next/dist/next-server/lib/head'
-
 import classes from './Header.module.css'
 
 function Header() {
