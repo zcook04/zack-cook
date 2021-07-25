@@ -1,13 +1,13 @@
 .blogSection {
     background-color: #CDCDCD;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 .wrapper {
     max-width: 1100px;
     margin: auto;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;

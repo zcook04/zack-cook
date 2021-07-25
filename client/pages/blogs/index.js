@@ -10,7 +10,7 @@ function AllBlogsPage(props) {
         <section className={classes.blogSection}>
             <div className={classes.wrapper}>
                 {props.blogs.map((blog) => {
-                    return <BlogCard key={blog.slug} title={blog.title} data={blog.data} slug={blog.slug}/>
+                    return <BlogCard key={blog.slug} slug={blog.slug} title={blog.title} date={blog.date} desc={blog.desc} image={blog.image}/>
                 })}
             </div>
         </section>
