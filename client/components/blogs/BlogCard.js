@@ -13,10 +13,16 @@ function BlogCard(props) {
     return (
         <Link href={link}>
             <article className={classes.wrapper}>
-                <h2>{props.title}</h2>
+            <div className={classes.imgWrapper} >
+                <Image src={props.image} width='200' height='200' />
+            </div>
+            <div className={classes.infoWrapper} >
+                <div className={classes.headerContainer} >
+                    <h2>{props.title}</h2>
+                    <p>{formattedDate}</p>
+                </div>
                 <p>{props.desc}</p>
-                <p>{formattedDate}</p>
-                <Image src={`\/${props.image}`} width='200' height='200' />
+            </div>
             </article>
         </Link>
     )
