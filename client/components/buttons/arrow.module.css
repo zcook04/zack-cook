@@ -1,3 +1,7 @@
-.arrow {
-    background-color: #ffffff;
+.flipped {
+    transform: scaleX(-1);
+}
+
+.arrow:hover {
+    cursor: pointer;
 }

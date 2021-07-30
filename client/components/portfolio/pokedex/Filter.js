@@ -1,6 +1,6 @@
 import classes from './filter.module.css'
 
-import React, { useState, useEffect } from 'react'
+import Arrow from '../../buttons/Arrow'
 
 function Filter(props) {
     const {searchVal, setSearchVal} = props
@@ -12,6 +12,11 @@ function Filter(props) {
     return (
         <section className={classes.wrapper}>
                 <input value={searchVal} onChange={changeHandler} type="text" className={classes.searchInput} id="portfolio-search" placeholder="Search for a Pokemon"/>
+                <div className={classes.pagination}>
+                    <Arrow flipped='True' height="40px" width="25px" />
+                    <p>Showing 0/150</p>
+                    <Arrow height="40px" width="25px"/>
+                </div>
         </section>
     )
 }
