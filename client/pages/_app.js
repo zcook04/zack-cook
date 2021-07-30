@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout'
 
 function MyApp({ Component, pageProps }) { 
   switch (Component.name) {
-    case "NoLayout":
+    case "Pokedex":
       return <Component {...pageProps} />
     default:
       return <Layout><Component {...pageProps} /></Layout>

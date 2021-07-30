@@ -1,4 +1,4 @@
-import classes from './classes.module.css'
+import classes from './underconstruction.module.css'
 function UnderConstruction() {
     return (
         <section className={classes.ucWrapper}>

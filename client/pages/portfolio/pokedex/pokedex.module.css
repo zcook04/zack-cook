@@ -1,0 +1,13 @@
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.pokeCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    margin: 0 1rem;
+}
