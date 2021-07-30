@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Filter from '../../../components/portfolio/Filter'
+import Filter from '../../../components/portfolio/pokedex/Filter'
 import axios from 'axios'
 import PokeCard from '../../../components/portfolio/pokedex/PokeCard'
 
