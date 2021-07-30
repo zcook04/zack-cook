@@ -1,8 +1,14 @@
 import '../styles/globals.css'
 import Layout from '../components/layout/Layout'
 
-function MyApp({ Component, pageProps }) {
-  return <Layout><Component {...pageProps} /></Layout>
+function MyApp({ Component, pageProps }) { 
+  switch (Component.name) {
+    case "NoLayout":
+      return <Component {...pageProps} />
+    default:
+      return <Layout><Component {...pageProps} /></Layout>
+  }
+  
 }
 
 export default MyApp
