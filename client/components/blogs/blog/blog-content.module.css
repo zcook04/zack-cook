@@ -16,14 +16,20 @@
 
 .article h3 {
     color: var(--color-blue-medium);
-    font-size: 1.1rem;
-    margin: 2rem 0 0 0;
+    font-size: 1.3rem !important;
+    font-weight: 700;
+    letter-spacing: .03rem;
+    margin: 4rem 0 0 0;
+}
+
+.article h3:first-child {
+    margin: 1rem 0 0 0 ;
 }
 
 .article p {
     color: var(--color-blue-dark);
     font-weight: 400;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
 }
 
 .article ul li {
