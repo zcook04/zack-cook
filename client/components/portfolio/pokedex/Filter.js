@@ -14,7 +14,7 @@ function Filter(props) {
                 <input value={searchVal} onChange={changeHandler} type="text" className={classes.searchInput} id="portfolio-search" placeholder="Search for a Pokemon"/>
                 <div className={classes.pagination}>
                     <Arrow flipped='True' height="40px" width="25px" />
-                    <p>Showing 0/150</p>
+                    <p>Showing 0/{props.count}</p>
                     <Arrow height="40px" width="25px"/>
                 </div>
         </section>

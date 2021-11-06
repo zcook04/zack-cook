@@ -8,6 +8,7 @@ import classes from './pokedex.module.css'
 function Pokedex() {
     const [pokemon, setPokemon] = useState([])
     const [searchVal, setSearchVal] = useState('')
+    const [count, setCount] = useState(0)
 
     useEffect(() => {
         const getInitialData = async () => {
@@ -17,11 +18,21 @@ function Pokedex() {
         getInitialData()
     }, [])
 
+    useEffect(() => {
+        if (searchVal) {
+            const currentLength = pokemon.filter(poke => poke.name.includes(searchVal)).length
+            setCount(currentLength)
+        } else {
+            setCount(pokemon.length)
+        }
+    }, [pokemon, searchVal])
+
     return (
         <section className={classes.wrapper}>
             <Filter 
             searchVal={searchVal}
             setSearchVal={setSearchVal}
+            count={count}
             />
             <section className={classes.pokeCards}>
                 {pokemon && pokemon.map(poke => {
@@ -37,7 +48,7 @@ function Pokedex() {
                         return true
                     }
                     })
-                .slice(0, 8)}
+                .slice(0, 25)}
 
             </section>    
         </section>

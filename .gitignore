@@ -1,5 +1,6 @@
 *.crt
 *.key
+*.pem
 ssl/
 node_modules
 *.env

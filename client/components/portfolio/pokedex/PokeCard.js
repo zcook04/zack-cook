@@ -3,6 +3,7 @@ import PokemonTypes from './PokemonTypes'
 import axios from 'axios'
 
 import classes from './pokecard.module.css'
+import Image from 'next/image'
 import { toTitleCase } from '../../../utils/tools'
 
 function PokeCard(props) {
@@ -22,7 +23,7 @@ function PokeCard(props) {
     return (
         <div className={classes.wrapper}>
             <h2>{toTitleCase(name)}</h2>
-            {image && <img src={image}/>}
+            {image && <Image src={image}/>}
             <div className={classes.types} >
                 {types && types.map(type => {
                     return <PokemonTypes key={type.type.name} type={type.type.name} />

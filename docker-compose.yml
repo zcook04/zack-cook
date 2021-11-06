@@ -10,13 +10,6 @@ services:
     volumes:
       - ./nginx/ssl:/app/ssl
     image: surreal29/zack-cook-nginx
-  api:
-    build:
-      context: ./api
-      dockerfile: Dockerfile
-    ports:
-      - '5000:5000'
-    image: surreal29/zack-cook-api
   client:
     build:
       context: ./client
