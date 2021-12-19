@@ -23,7 +23,7 @@ function PokeCard(props) {
     return (
         <div className={classes.wrapper}>
             <h2>{toTitleCase(name)}</h2>
-            {image && <Image src={image}/>}
+            {image && <Image height='100%' width='100%' src={image} />}
             <div className={classes.types} >
                 {types && types.map(type => {
                     return <PokemonTypes key={type.type.name} type={type.type.name} />
